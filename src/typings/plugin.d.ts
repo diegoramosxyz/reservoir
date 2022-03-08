@@ -13,11 +13,10 @@ interface Helpers {
   postcss: any
 }
 
-type UserStyles = ({ theme }: { theme: Helpers['theme'] }) =>
-  | {
-      [x: string]: any
-    }
-  | { [x: string]: any }
+type UserStyles = ({ theme }: { theme: Helpers['theme'] }) => {
+  [x: string]: any
+  prefix?: string
+}
 
 type PluginOptions =
   | {
@@ -28,6 +27,9 @@ type PluginOptions =
         baseStyles?: UserStyles
       }
       inputs?: {
+        baseStyles?: UserStyles
+      }
+      fonts?: {
         baseStyles?: UserStyles
       }
       badges?: {

@@ -1,6 +1,6 @@
 {
   "name": "@ramosdiego/reservoir",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "A TailwindCSS plugin which serves a as UI library.",
   "main": "dist/index.js",
   "scripts": {

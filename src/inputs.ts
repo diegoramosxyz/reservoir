@@ -13,15 +13,14 @@ export default function inputs(
 
   // BASE INPUT STYLES
   const inputBaseStyles = {
-    padding: `${theme(`spacing[1]`)} ${theme(`spacing[2]`)}`,
-    backgroundColor: 'transparent',
+    padding: '8px 24px',
+    backgroundColor: '#FFF',
     '&:autofill': {
-      backgroundColor: 'transparent',
+      backgroundColor: '#FFF',
     },
     outline: '2px solid transparent',
     outlineOffset: '2px',
     '&:disabled': {
-      opacity: '80%',
       cursor: 'not-allowed',
     },
     transitionProperty: theme(`transitionProperty[all]`),
@@ -33,27 +32,22 @@ export default function inputs(
 
   const inputOutlineStyles = {
     ...inputBaseStyles,
-    borderWidth: theme(`borderWidth[2]`),
-    borderRadius: theme(`borderRadius[md]`),
-  }
-
-  const inputUnderlineStyles = {
-    ...inputBaseStyles,
-    borderBottomWidth: theme(`borderWidth[2]`),
+    borderWidth: '1px',
+    borderRadius: '8px',
   }
 
   colors.forEach((color) => {
     components[`.input-${color}-outline`] = {
       ...inputOutlineStyles,
-      borderColor: theme(`colors.neutral[500]`),
-      caretColor: theme(`colors.${color}[600]`),
-      '&:disabled': {
-        ...inputOutlineStyles['&:disabled'],
-        borderColor: theme(`colors.neutral[200]`),
-      },
+      borderColor: '#D1D5DB',
+      // caretColor: theme(`colors.${color}[600]`),
+      // '&:disabled': {
+      //   ...inputOutlineStyles['&:disabled'],
+      //   borderColor: theme(`colors.neutral[200]`),
+      // },
       '&:focus': {
-        borderColor: theme(`colors.${color}[700]`),
-        boxShadow: `0 0 0 2px ${theme(`colors.${color}[300]`)}`,
+        borderColor: 'transparent',
+        boxShadow: `0 0 0 4px ${theme(`colors.${color}[300]`)}`,
       },
     }
 
@@ -68,35 +62,6 @@ export default function inputs(
       '&:focus': {
         borderColor: theme(`colors.${color}[500]`),
         boxShadow: `0 0 0 2px ${theme(`colors.${color}[700]`)}`,
-      },
-      '&::-webkit-calendar-picker-indicator': {
-        filter: 'invert(1)',
-      },
-    }
-
-    components[`.input-${color}-underline`] = {
-      ...inputUnderlineStyles,
-      borderColor: theme(`colors.neutral[500]`),
-      caretColor: theme(`colors.${color}[600]`),
-      '&:disabled': {
-        ...inputUnderlineStyles['&:disabled'],
-        borderColor: theme(`colors.neutral[200]`),
-      },
-      '&:focus': {
-        borderColor: theme(`colors.${color}[700]`),
-      },
-    }
-
-    components[`.input-${color}-underline-dark`] = {
-      ...inputUnderlineStyles,
-      borderColor: theme(`colors.neutral[700]`),
-      caretColor: theme(`colors.${color}[300]`),
-      '&:disabled': {
-        ...inputUnderlineStyles['&:disabled'],
-        borderColor: theme(`colors.neutral[600]`),
-      },
-      '&:focus': {
-        borderColor: theme(`colors.${color}[500]`),
       },
       '&::-webkit-calendar-picker-indicator': {
         filter: 'invert(1)',

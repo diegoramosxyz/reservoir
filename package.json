@@ -1,12 +1,11 @@
 {
   "name": "@ramosdiego/reservoir",
-  "version": "0.0.8",
+  "version": "0.0.10",
   "description": "A TailwindCSS plugin which serves a as UI library.",
   "main": "dist/index.js",
   "scripts": {
     "lint": "prettier --write .",
-    "build": "rimraf dist/ && tsc --removeComments",
-    "publish": "npm publish"
+    "build": "rimraf dist/ && tsc --removeComments"
   },
   "repository": {
     "type": "git",

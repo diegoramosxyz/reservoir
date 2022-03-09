@@ -81,6 +81,21 @@ export default function fonts(
     fontWeight: 600,
     fontSize: '0.625rem',
   }
+  components[`.${prefix}-label-s`] = {
+    ...fontBaseStyles,
+    fontWeight: 500,
+    fontSize: '0.75rem',
+  }
+  components[`.${prefix}-label-m`] = {
+    ...fontBaseStyles,
+    fontWeight: 500,
+    fontSize: '0.875rem',
+  }
+  components[`.${prefix}-label-l`] = {
+    ...fontBaseStyles,
+    fontWeight: 500,
+    fontSize: '1rem',
+  }
 
   return components
 }

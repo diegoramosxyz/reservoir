@@ -37,6 +37,7 @@ export default function buttons(
 
   // BASE BUTTON STYLES
   const buttonBaseStyles: { [x: string]: any } = {
+    fontSize: '1rem',
     padding: '8px 24px',
     borderWidth: '1px',
     borderColor: 'transparent',

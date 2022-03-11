@@ -35,6 +35,9 @@ type PluginOptions =
       badges?: {
         baseStyles?: UserStyles
       }
+      misc?: {
+        baseStyles?: UserStyles
+      }
     }
   | undefined
 

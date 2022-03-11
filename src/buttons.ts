@@ -28,7 +28,7 @@ export default function buttons(
 
   let preset = {
     borderRadius: '8px',
-    fontWeight: 500,
+    fontWeight: 400,
   }
 
   if (buttons?.preset && presets[buttons?.preset]) {

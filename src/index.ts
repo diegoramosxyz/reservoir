@@ -3,6 +3,7 @@ import buttons from './buttons'
 import fonts from './fonts'
 import inputs from './inputs'
 import badges from './badges'
+import misc from './misc'
 import getColors from './colors'
 
 module.exports = plugin.withOptions(
@@ -15,6 +16,7 @@ module.exports = plugin.withOptions(
         ...fonts(options, theme, colors),
         ...inputs(options, theme, colors),
         ...badges(options, theme, colors),
+        ...misc(options, theme, colors),
       })
     }
 )
